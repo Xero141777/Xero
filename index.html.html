@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My First Website - Activity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root { --paper: #f4f5ee; --ink: #202923; --muted: #66736a; --green: #174d43; --coral: #e9674f; --yellow: #f0c75e; --line: #d9e1d9; }
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: radial-gradient(#cbd5cc 0.7px, transparent 0.7px) 0 0 / 18px 18px, var(--paper); font: 16px/1.6 "DM Sans", sans-serif; }
+a { color: inherit; }
+.page-width { width: min(1080px, calc(100% - 40px)); margin: auto; }
+.site-header, .featured-track { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.site-header { min-height: 72px; }
+.brand, .site-nav a { font-size: 13px; font-weight: 700; text-decoration: none; }
+.brand { color: var(--green); }
+.brand span, .site-nav a, .plain-list li, .number-list li, .playlist-intro, .site-footer { color: var(--muted); }
+.brand span { margin-left: 8px; font-size: 11px; font-weight: 500; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 20px; }
+.site-nav a:hover, .song-link:hover { color: var(--coral); }
+.intro { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 32px; padding: 36px; border-radius: 8px; background: var(--green); color: #fffefa; }
+.intro figure { margin: 0; }
+.intro img { display: block; width: 100%; height: 280px; border-radius: 4px; background: #273b33; object-fit: contain; }
+.eyebrow { margin: 0 0 8px; color: var(--coral); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.intro .eyebrow { color: var(--yellow); }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, .featured-track h3, .login-section h2 { font-family: Fraunces, Georgia, serif; }
+.intro h1 { margin-bottom: 12px; font-size: 44px; line-height: 1.1; }
+.intro h1 span { color: var(--yellow); }
+.intro-copy > p:last-child { margin-bottom: 0; color: #e0eae2; }
+.section-block { padding: 34px 0; border-bottom: 1px solid var(--line); }
+.section-heading { margin-bottom: 20px; }
+.section-heading h2 { margin-bottom: 0; font-size: 28px; line-height: 1.2; }
+.interest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.interest-grid h3, .featured-track h3 { margin-bottom: 8px; font-size: 15px; }
+.plain-list, .number-list, .song-list { margin: 0; padding: 0; }
+.plain-list li, .number-list li { padding: 6px 0; border-bottom: 1px solid var(--line); }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; background: #fffefa; }
+table { width: 100%; border-collapse: collapse; text-align: left; white-space: nowrap; }
+caption { padding: 12px 16px; color: var(--green); font-weight: 700; text-align: left; }
+th, td { padding: 11px 16px; border-top: 1px solid var(--line); font-size: 13px; }
+th { background: #e8eee8; color: var(--green); }
+.featured-track { margin-bottom: 22px; padding: 18px 20px; border-radius: 6px; background: var(--yellow); }
+.featured-track .eyebrow { margin-bottom: 4px; color: #6d5215; }
+.featured-track h3 { margin-bottom: 2px; font-size: 19px; }
+.featured-track p:last-child { margin-bottom: 0; font-size: 13px; }
+.watch-link, .login-form input[type="submit"] { padding: 10px 14px; border: 0; border-radius: 4px; background: var(--green); color: white; font: inherit; font-size: 13px; font-weight: 700; text-decoration: none; cursor: pointer; }
+.playlist-intro { margin-bottom: 8px; font-size: 14px; }
+.song-list { list-style: none; border-top: 1px solid var(--line); }
+.song-list li { border-bottom: 1px solid var(--line); }
+.song-link { display: block; padding: 10px 12px; font-size: 14px; font-weight: 600; text-decoration: none; }
+.login-section { margin: 34px 0 24px; padding: 26px; border-radius: 8px; background: #273b33; color: #fffefa; }
+.login-section h2 { margin-bottom: 16px; font-size: 24px; }
+.login-form { display: grid; grid-template-columns: 1fr 1fr auto; align-items: end; gap: 14px; }
+.field label { display: block; margin-bottom: 5px; font-size: 12px; }
+.field input { width: 100%; min-height: 42px; padding: 9px 12px; border: 1px solid #708078; border-radius: 4px; font: inherit; }
+.login-form input[type="submit"] { background: var(--coral); }
+.site-footer { padding-bottom: 24px; font-size: 11px; }
+@media (max-width: 700px) { .site-header { align-items: flex-start; flex-direction: column; justify-content: center; gap: 10px; padding: 14px 0; } .intro, .interest-grid { grid-template-columns: 1fr; } .intro { gap: 22px; padding: 26px; } .intro h1 { font-size: 36px; }
+ .intro img { height: 240px; } .interest-grid { gap: 24px; } .featured-track { align-items: flex-start; flex-direction: column; } .login-form { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="page-width">
+	<header class="site-header">
+		<a class="brand" href="#top">WEB NOTEBOOK <span>01 / HTML</span>
+</a>
+		<nav class="site-nav" aria-label="Page sections">
+			<a href="#favorites">Lists</a>
+			<a href="#grades">Grades</a>
+			<a href="#music">Music</a>
+			<a href="#login">Login</a>
+		</nav>
+	</header>
+
+	<main>
+		<section class="intro" id="top">
+			<div class="intro-copy">
+				<p class="eyebrow">My web project · HTML basics</p>
+				<h1>Welcome to my<br>website<span>.</span>
+</h1>
+				<p>This page brings together a few things, what I'm learning, grades, and songs on repeat.</p>
+			</div>
+			<figure>
+				<img src="https://i.pinimg.com/1200x/3f/18/f6/3f18f691c2b417511dcc16e9e50ccdf0.jpg" alt="Sample image" width="600" height="400">
+			</figure>
+		</section>
+
+		<section class="section-block" id="favorites" aria-labelledby="favorites-title">
+			<div class="section-heading">
+				<p class="eyebrow">01 / The everyday</p>
+				<h2 id="favorites-title">A few favorite things</h2>
+			</div>
+			<div class="interest-grid">
+				<div>
+					<h3>Daily list</h3>
+					<ul class="plain-list">
+						<li>Kain</li>
+						<li>Tulog</li>
+						<li>Code</li>
+						<li>lakad</li>
+						<li>cellphone</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Learning list</h3>
+					<ol class="number-list">
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>Java</li>
+						<li>Python</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-block" id="grades" aria-labelledby="grades-title">
+			<div class="section-heading">
+				<p class="eyebrow">02 / In class</p>
+				<h2 id="grades-title">Student information</h2>
+			</div>
+			<div class="table-wrap">
+				<table>
+					<caption class="visually-hidden">Student quiz results</caption>
+					<thead>
+						<tr>
+							<th scope="col">Name</th>
+							<th scope="col">Grade &amp; Section</th>
+							<th scope="col">Quiz 1</th>
+							<th scope="col">Quiz 2</th>
+							<th scope="col">Quiz 3</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Anna</td>
+							<td>G9-Living Flame</td>
+							<td>25/25</td>
+							<td>30/30</td>
+							<td>20/20</td>
+						</tr>
+						<tr>
+							<td>Nashe</td>
+							<td>G9-Living Flame</td>
+							<td>24/25</td>
+							<td>29/30</td>
+							<td>19/20</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<section class="section-block" id="music" aria-labelledby="music-title">
+			<div class="section-heading">
+				<p class="eyebrow">03 / On repeat</p>
+				<h2 id="music-title">The listening corner</h2>
+			</div>
+			<div class="featured-track">
+				<div>
+					<p class="eyebrow">Featured song</p>
+					<h3>Meron Din Palang Ganda Ang Buhay</h3>
+					<p>Lyca Gairanod</p>
+				</div>
+				<a class="watch-link" href="https://youtu.be/KI6fc1kteHM" target="_blank" rel="noopener noreferrer">▶ Watch on YouTube</a>
+			</div>
+			<p class="playlist-intro">Five favorites from different genres.</p>
+			<ul class="song-list">
+				<li>
+<a class="song-link" href="https://www.youtube.com/watch?v=xUNDN29QREE&amp;list=RDxUNDN29QREE&amp;start_radio=1&amp;pp=oAcB" target="_blank" rel="noopener noreferrer">▶ Listen Oh my little baby boy by Babe (Eurodance)</a>
+</li>
+				<li>
+<a class="song-link" href="https://youtu.be/Hs3AFIKKlaM?list=RDxUNDN29QREE&amp;start_radio=1&amp;pp=oAcB" target="_blank" rel="noopener noreferrer">▶ Listen to Call me maybe by Carly Rae Jepsen (Pop)</a>
+</li>
+				<li>
+<a class="song-link" href="https://youtu.be/lBLqRTCNJqw?list=RDlBLqRTCNJqw&amp;start_radio=1&amp;pp=oAcB" target="_blank" rel="noopener noreferrer">▶ Listen to ангелочек by Onokami (Russian Pop)</a>
+</li>
+				<li>
+<a class="song-link" href="https://youtu.be/QTdf3FYHUko?list=RDQTdf3FYHUko&amp;start_radio=1&amp;pp=oAcB" target="_blank" rel="noopener noreferrer">▶ Listen to I saw you walking alone so I stopped to talk to you by Arpgeo (Indie)</a>
+</li>
+				<li>
+<a class="song-link" href="https://youtu.be/-cxUoN-HRw0?list=RD-cxUoN-HRw0&amp;start_radio=1&amp;pp=oAcB" target="_blank" rel="noopener noreferrer">▶ Listen to Popipo by Lamazep (Japanese Pop)</a>
+</li>
+			</ul>
+		</section>
+
+		<section class="login-section" id="login" aria-labelledby="login-title">
+			<p class="eyebrow">One last thing</p>
+			<h2 id="login-title">User login</h2>
+			<form class="login-form" onsubmit="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); return false;">
+				<div class="field">
+					<label for="username">Username</label>
+					<input type="text" id="username" name="username" placeholder="Enter username">
+				</div>
+				<div class="field">
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password" placeholder="Enter password">
+				</div>
+				<input type="submit" value="Login">
+			</form>
+		</section>
+	</main>
+
+	<footer class="site-footer">Hello.</footer>
+</div>
+</body>
+</html>
