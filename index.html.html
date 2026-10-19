@@ -59,8 +59,18 @@ th { background: #e8eee8; color: var(--green); }
 .field input { width: 100%; min-height: 42px; padding: 9px 12px; border: 1px solid #708078; border-radius: 4px; font: inherit; }
 .login-form input[type="submit"] { background: var(--coral); }
 .site-footer { padding-bottom: 24px; font-size: 11px; }
+.register-panel { margin: 14px 0 40px; padding: 28px 26px; border-radius: 10px; background: #fffefa; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(23, 77, 67, 0.08); }
+.register-panel h2 { margin-bottom: 10px; font-size: 22px; }
+.register-panel > p { margin-bottom: 18px; color: var(--muted); }
+.register-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.field-group { display: flex; flex-direction: column; gap: 6px; }
+.field-group.full { grid-column: 1 / -1; }
+.field-group label { font-weight: 600; color: var(--green); font-size: 13px; }
+.field-group input, .field-group select, .field-group textarea { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; background: #f7faf7; font: inherit; color: var(--ink); }
+.field-group textarea { min-height: 120px; resize: vertical; }
+.register-form button { grid-column: 1 / -1; justify-self: start; padding: 12px 18px; border: 0; border-radius: 6px; background: var(--coral); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
 @media (max-width: 700px) { .site-header { align-items: flex-start; flex-direction: column; justify-content: center; gap: 10px; padding: 14px 0; } .intro, .interest-grid { grid-template-columns: 1fr; } .intro { gap: 22px; padding: 26px; } .intro h1 { font-size: 36px; }
- .intro img { height: 240px; } .interest-grid { gap: 24px; } .featured-track { align-items: flex-start; flex-direction: column; } .login-form { grid-template-columns: 1fr; } }
+ .intro img { height: 240px; } .interest-grid { gap: 24px; } .featured-track { align-items: flex-start; flex-direction: column; } .login-form { grid-template-columns: 1fr; } .register-form { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -201,6 +211,47 @@ th { background: #e8eee8; color: var(--green); }
 					<input type="password" id="password" name="password" placeholder="Enter password">
 				</div>
 				<input type="submit" value="Login">
+			</form>
+		</section>
+
+		<section class="register-panel" aria-labelledby="register-title">
+			<p class="eyebrow">04 / Student info</p>
+			<h2 id="register-title">Register your details</h2>
+			<p>Fill in your profile so your classmates can get to know you better.</p>
+			<form class="register-form">
+				<div class="field-group">
+					<label for="name">Full name</label>
+					<input type="text" id="name" name="name" placeholder="Enter full name" required>
+				</div>
+				<div class="field-group">
+					<label for="age">Age</label>
+					<input type="number" id="age" name="age" min="1" max="100" placeholder="Enter age" required>
+				</div>
+				<div class="field-group">
+					<label for="grade">Grade level</label>
+					<select id="grade" name="grade">
+						<option value="">Select grade</option>
+						<option value="7">Grade 7</option>
+						<option value="8">Grade 8</option>
+						<option value="9">Grade 9</option>
+					</select>
+				</div>
+				<div class="field-group">
+					<label for="section">Section</label>
+					<select id="section" name="section">
+						<option value="">Select section</option>
+						<option value="Divine Wisdom">Divine Wisdom</option>
+						<option value="Living Flame">Living Flame</option>
+						<option value="Sacred Simplicity">Sacred Simplicity</option>
+						<option value="Guiding Light">Guiding Light</option>
+						<option value="Interior Silence">Interior Silence</option>
+					</select>
+				</div>
+				<div class="field-group full">
+					<label for="hobbies">Hobbies</label>
+					<textarea id="hobbies" name="hobbies" placeholder="Tell us what you enjoy doing..."></textarea>
+				</div>
+				<button type="submit">Register</button>
 			</form>
 		</section>
 	</main>
