@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Website - Activity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #1B365D;
+        }
+        h3 {
+            color: #008080;
+        }
+        table, tr, th, td {
+            border-width: 1px;
+            border-color: black;
+            border-style: solid;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        th {
+            background-color: #e0e0e0;
+        }
+        .song-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #FF0000;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .song-link:hover {
+            background-color: #CC0000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Heading and Paragraph -->
+    <h1>Welcome to My First Website</h1>
+    <p style="font-size: 14px; color: #333;">
+        This webpage showcases basic HTML elements including Headings, Paragraphs, Custom Styles, Lists, Tables, Images, Forms, and Links.
+    </p>
+    <hr>
+    <!-- Unordered and Ordered Lists -->
+    <h3>This is UNORDERED List:</h3>
+    <ul>
+        <li>Kain</li>
+        <li>Tulog</li>
+        <li>Code</li>
+<li>cellphone</li>
+<li>usap</li>
+    </ul>
+    <h3>This is ORDERED List:</h3>
+    <ol>
+        <li>Html</li>
+        <li>Css</li>
+        <li>Javascript</li>
+		<li>Python</li>
+		<li>Java</li>
+    </ol>
+    <hr>
+    <!-- Table Section -->
+    <h3>Table Example:</h3>
+    <table>
+        <table border="1"
+       style="border-collapse: collapse;">
+  <caption>Student Information</caption>
+  <tr>
+    <th>Name</th><th>Grade & section</th>
+    <th>Quiz 1</th><th>Quiz 2</th><th>Quiz 3</th>
+  </tr>
+  <tr>
+    <td>Louie</td><td>G9-Section</td>
+    <td>25/25</td><td>30/30</td><td>20/20</td>
+  </tr>
+  <tr>
+    <td>Lara </td><td>G9-Section</td>
+    <td>25/25</td><td>30/30</td><td>20/20</td>
+  </tr>
+    </table>  <br>
+    <!-- Image Section Go to Google and copy image address of your favorite      image -->
+    <h3>Inserting an Image:</h3>
+    <img src="file:///C:/Users/FLORIE/AppData/Roaming/Code/agentSessionData/ee0e3679-2cd8-4dd6-937a-c3f16ee6614e/attachments/792dd277-b850-411a-946c-8aeafd0c4ee3/Pasted%20Image.png" alt="Louie image" width="300">  <hr>
+    <!-- Music / Video Link Section -->
+    <h3>Featured Song (YouTube):</h3>   
+    <p>Visit YouTube to watch videos.</p>
+     <a href="https://www.youtube.com"
+     target="_blank">
+     Open YouTube
+     </a>
+    <p>Listen to <strong>"Meron Din Palang Ganda Ang Buhay"</strong> by     <em>Lyca Gairanod</em>:</p>
+    <a class="song-link" href="https://youtu.be/KI6fc1kteHM?si=kbCRERS_kpgg6yuR=lycagairanod" target="_blank">
+        ▶ Watch "Meron Din Palang Ganda Ang Buhay" on YouTube
+    </a>
+    <hr>
+    <p>My favorite song is <strong>Libong Libong Buwan</strong>.</p>
+    <a class="song-link" href="https://www.youtube.com/results?search_query=Libong+Libong+Buwan" target="_blank">
+        ▶ Listen to Libong Libong Buwan
+    </a>
+    <hr>
+    <!-- Form & Input Types -->
+    <h3>User Login Form:</h3>
+    <form action="#" method="POST">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" placeholder="Enter Username"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter Password"><br><br>
+        <input type="submit" value="SUBMIT">
+    </form>
+    <hr>  <br>
+    <form>
+  <label for="name">Full Name:</label>
+  <input type="text" id="name"
+         name="name" required>  <br><br>
+  <label for="age">Age:</label>
+  <input type="text" id="age"
+         age="age" required> <br><br>
+  <label for="grade">Grade Level:</label>
+  <select id="grade" name="grade">
+    <option value="7">Grade 7</option>
+    <option value="8">Grade 8</option>
+    <option value="9">Grade 9</option>
+  </select> <br><br>
+  <label for="Section">Section:</label>
+  <select id="Section" name="Section">
+    <option value="Divine Wisdom">Divine Wisdom</option>
+    <option value="Living Flame">Living Flame</option>
+    <option value="Sacred Simplicity">Sacred Simplicity</option>
+    <option value="Guiding Light">Guiding Light</option>
+    <option value="Interior Silence">Interior Silence</option>
+  </select>
+  <br><br>
+  <label for="hobbies">Hobbies:</label>
+  <textarea id="hobbies" name="hobbies"></textarea>   <br><br>
+  <button type="submit">Register</button>
+</form>
+</body>
+</html>
